@@ -1,5 +1,6 @@
 /* Variables are containers of values in a memory location. They are used to store and manipulate data in a program.
-   Variables structure logic in programs by storing data that can be used and modified throughout the program. They allow developers to create dynamic and interactive applications by enabling them to store user input, perform calculations, and manage state.
+   Variables structure logic in programs by storing data that can be used and modified throughout the program. 
+   They allow developers to create dynamic and interactive applications by enabling them to store user input, perform calculations, and manage state.
 
 They contain;
 1. A name (identifier) that is used to refer to the variable.
@@ -110,7 +111,9 @@ console.log(blockVar); // Error: blockVar is not defined (blockVar is not access
 Scope is important in programming because:
  It helps to prevent naming conflicts. 
 It allows for better organization of code. 
-It ensures that variables and functions are only accessible where they are needed, which can help to reduce bugs and improve the maintainability of the code.
+It ensures that variables and functions are only accessible where they are needed(encapsulation), which can help to reduce bugs and improve the maintainability of the code.
 
-
+*Encapsulation is a fundamental principle of object-oriented programming that refers to the bundling of data (variables) and methods (functions) that operate on that data into a single unit, typically called a class.
+ It also restricts direct access to some of the object's components, which can help to prevent unintended interference and misuse of the data. 
+ Encapsulation allows for better control over the internal state of an object and promotes modularity and maintainability in code.
 */
