@@ -1,12 +1,14 @@
 /* Variables are containers of values in a memory location. They are used to store and manipulate data in a program.
+variables store data in the ram and are accessed by their name. They can hold different types of data, such as numbers, strings, booleans, objects, etc.
    Variables structure logic in programs by storing data that can be used and modified throughout the program. 
    They allow developers to create dynamic and interactive applications by enabling them to store user input, perform calculations, and manage state.
 
 They contain;
 1. A name (identifier) that is used to refer to the variable.ie the name of the variable is used to access and manipulate its value in the code.
-2. A value that is assigned to the variable.(actual data stored in the variable).
-3. memory location where the variable is stored (the address in memory where the variable's value is stored).
-4. A data type that defines the type of value the variable can hold (e.g., string, number, boolean, etc.).
+2.an undefined value (initially) until it is assigned a value. Once a value is assigned to the variable, it can be accessed and modified using its name.
+3. A value that is assigned to the variable.(actual data stored in the variable).
+4. memory location where the variable is stored (the address in memory where the variable's value is stored).
+5. A data type that defines the type of value the variable can hold (e.g., string, number, boolean, etc.).
 
 In a browser , console.log() is a method used to print output to the console.
  It is commonly used for debugging purposes, allowing developers to see the values of variables, the flow of execution, and any errors that may occur in their code.
@@ -19,6 +21,7 @@ console.log(name); // Output: John
 
 
  In JavaScript, you can declare variables using the `var`, `let`, or `const` keywords.
+
  Example of declaring variables in JavaScript:
 
 1. Using var (function-scoped variable)
@@ -120,6 +123,7 @@ It ensures that variables and functions are only accessible where they are neede
  Encapsulation allows for better control over the internal state of an object and promotes modularity and maintainability in code.
 
  General concepts when introducing vriables:
+
 1. Variable declaration: The process of creating a variable and assigning it a name.
 sample code:
 let age; // Variable declaration without initialization
@@ -131,8 +135,10 @@ let age = 25; // Variable declaration with initialization
 
 3. Variable assignment: The process of assigning a new value to an already declared variable.
 sample code:
+= is the assignment operator used to assign a new value to a variable.
 let age = 25; // Variable declaration with initialization
 age = 30; // Variable assignment
+
 
 4. Variable scope: The accessibility of a variable within different parts of the code, which can be global, function, or block scope.
 sample code:
@@ -144,6 +150,12 @@ function myFunction() {
     let blockVar = "I am in a block"; // Block scope
   }
 }
+
+5. Variable reassignment: The process of changing the value of a variable after it has been declared and initialized.
+sample code:
+let age = 25;
+age = 30; // Variable reassignment
+
 
 
 
