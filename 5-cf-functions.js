@@ -7,9 +7,9 @@
  * ANALOGY: Like a vending machine - you insert money (input), it processes,
  * and gives you a snack (output).
  
-
-
-1. BASIC FUNCTION DECLARATION
+Function Declarations: These use the function keyword followed by a name
+. They are subject to hoisting, meaning the JavaScript engine moves them to the top of their scope, allowing them to be called before they appear in the code
+ BASIC FUNCTION DECLARATION
 
 
 function greet(name) {
@@ -17,6 +17,85 @@ function greet(name) {
 }
 
 console.log(greet("Alice")); // "Hello, Alice!"
+
+
+
+.
+Function Expressions: These involve assigning a function to a variable
+. Unlike declarations, expressions are not hoisted and can be anonymous (lacking a name)
+// Function expression
+const multiply = function(a, b) {
+  return a * b;
+};
+
+
+Arrow Functions: 
+Introduced in ES6, these provide a concise syntax (param) => expression
+. They differ from traditional functions because they do not have their own this, arguments, super, or new.target
+. Instead, they lexically bind this, inheriting it from the surrounding scope
+
+// Arrow function (modern syntax)
+const divide = (a, b) => a / b;
+
+// Single parameter - no parentheses needed
+const square = x => x * x;
+
+// No parameters
+const random = () => Math.random();
+
+Immediately Invoked Function Expressions (IIFE): This pattern involves defining and calling a function simultaneously
+. It is often used to create a private scope for variables, preventing them from "polluting" the global namespace
+
+
+
+Scope and Closures
+Functions create their own scope, meaning variables defined inside a function are generally inaccessible from the outside
+.
+The Scope Chain: When a variable is accessed, the engine searches the local environment first, then moves up through parent scopes until it reaches the global scope
+.
+Closures: A closure is a function that "remembers" its lexical environment even after its parent function has finished executing
+. Technically, all functions in JavaScript are closures because they carry a hidden [[Environment]] property referencing the scope where they were created
+. Closures are powerful for data encapsulation and creating private variables
+.
+Functions as Methods and Objects
+When a function is a property of an object, it is called a method
+. In this context, the keyword this typically refers to the object the method belongs to
+. Because functions are themselves objects, they can also have their own properties and methods, such as call() and apply(), which are used to control the context of a function call
+.
+Advanced Execution Patterns
+Recursion: A function can call itself to solve problems involving nested structures, such as the DOM tree
+. Each call adds a new frame to the call stack, which follows a Last-In, First-Out (LIFO) order
+.
+Asynchronous Functions: Modern JavaScript uses the async and await keywords to handle asynchronous operations
+. An async function always returns a Promise, and await pauses execution until that promise settles, allowing asynchronous code to be written in a linear, readable style
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -67,25 +146,10 @@ function getStats(scores) {
 }
 
 /
- 4. FUNCTION EXPRESSIONS & ARROW FUNCTIONS
+ 
 
 
-// Function expression
-const multiply = function(a, b) {
-  return a * b;
-};
-
-// Arrow function (modern syntax)
-const divide = (a, b) => a / b;
-
-// Single parameter - no parentheses needed
-const square = x => x * x;
-
-// No parameters
-const random = () => Math.random();
-
-
- 5. HIGHER-ORDER FUNCTIONS
+ 4. HIGHER-ORDER FUNCTIONS
 
 
 // Function that takes a function
@@ -126,7 +190,7 @@ const totalSum = numbers.reduce((acc, num) => acc + num, 0);
 console.log(totalSum); // 15
 
 
- 7. CLOSURES - FUNCTIONS THAT REMEMBER STATE
+ 5. CLOSURES - FUNCTIONS THAT REMEMBER STATE
 
 
 function createCounter() {
@@ -144,7 +208,7 @@ console.log(counter()); // 2
 console.log(counter()); // 3
 
 
-8. CLOSURES WITH MULTIPLE METHODS
+6 CLOSURES WITH MULTIPLE METHODS
 
 
 function createBankAccount(initialBalance) {
@@ -171,7 +235,7 @@ console.log(account.deposit(500));  // "Deposited $500. Balance: $1500"
 console.log(account.withdraw(200)); // "Withdrew $200. Balance: $1300"
 
 
-9. RECURSION - FUNCTION CALLING ITSELF
+7. RECURSION - FUNCTION CALLING ITSELF
 
 
 // Countdown
@@ -197,7 +261,7 @@ console.log(factorial(5)); // 120
 
 
 
-// 11. REAL-WORLD USE CASE: E-COMMERCE
+// 8. REAL-WORLD USE CASE: E-COMMERCE
 
 
 function processOrder(items, discountCode = null) {
