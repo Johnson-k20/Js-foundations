@@ -7,8 +7,8 @@
  * ANALOGY: Like a vending machine - you insert money (input), it processes,
  * and gives you a snack (output).
  
-Function Declarations: These use the function keyword followed by a name
-. They are subject to hoisting, meaning the JavaScript engine moves them to the top of their scope, allowing them to be called before they appear in the code
+Function Declarations: These use the function keyword followed by a name.
+ They are subject to hoisting, meaning the JavaScript engine moves them to the top of their scope, allowing them to be called before they appear in the code
  BASIC FUNCTION DECLARATION
 
 
@@ -19,11 +19,10 @@ function greet(name) {
 console.log(greet("Alice")); // "Hello, Alice!"
 
 
-
-.
 Function Expressions: These involve assigning a function to a variable
 . Unlike declarations, expressions are not hoisted and can be anonymous (lacking a name)
 // Function expression
+
 const multiply = function(a, b) {
   return a * b;
 };
@@ -71,37 +70,9 @@ Asynchronous Functions: Modern JavaScript uses the async and await keywords to h
 .
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 2. PARAMETERS & ARGUMENTS
-     
-
+     Parameters are variables listed as part of fuction definition
+    Arguements are values passed to the function when it is invoked
 // Multiple parameters
 function calculateTotal(price, quantity, taxRate) {
   const subtotal = price * quantity;
@@ -113,7 +84,8 @@ console.log(calculateTotal(50, 3, 0.08)); // 162
 
 
 
-// Default parameters
+// Default parameters     ...allow named parameters to be initialized wwith default values if no val or undefined is passed.
+
 function createAccount(username, role = "user", active = true) {
   return { username, role, active };
 }
@@ -125,6 +97,10 @@ function sum(...numbers) {
 
 console.log(sum(1, 2, 3, 4, 5)); // 15
 
+Calling fuctions & the return statement
+
+Calling, invocking and executing are used when executing a predefined function.
+When a function does not return anything , its value becomes undefined
 
 3. RETURN VALUES
 

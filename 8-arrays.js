@@ -17,6 +17,15 @@ let fruits = ["apple", "pears", "oranges"];
 console.log(fruits[0]); // apple
 console.log(fruits[2]); // oranges
 
+//.shift
+removes first element from array then returns it
+
+//.unshift
+adds element to beginning of array
+fruits.unshift("bananas")
+console.log(fruits);["bananas","apples","pears"]
+
+
 // Adding elements
 fruits.push("figs"); // adds to end
 console.log(fruits);["apples" ,"pears", "oranges", "figs"];    ]
@@ -36,6 +45,24 @@ ie let numbers=[10, 20, 30];
 .numbers[0]-10
 .numbers[1]-20
 .numbers.length-3
+
+example of deletind, adding and overwriting
+
+var days=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+console.log(days);
+// prints ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+
+delete days[2];
+console.log(days); 
+// prints ['Monday', 'Tuesday', undefined, 'Thursday', 'Friday']
+
+days[2] = 'Wednesday';
+console.log(days); 
+// prints ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+
+delete days[7];
+console.log(days);
+// prints ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 
 
 Array methods .
@@ -106,4 +133,4 @@ for (let i = 0; i < matrix.length; i++) {
   }
 }
 
-
+Array methods

@@ -10,17 +10,21 @@ A datatype defines:
 1. Primitive data types(single values):
 They are immutable (cannot be changed after they are created) and are stored directly in the memory location assigned to the variable.
  The primitive data types include:
-   - String: Represents a sequence of characters. Example: "Hello, World!"
-   used for text and support concatenation (combining strings together).
+   - String: Represents a sequence of characters enclosed in quotation marks("", ``). Example: "Hello, World!" 
+   -used for text and support concatenation (combining strings together).
    ie 
 let greeting = "Hello, ";
 let name = "Alice";
 let message = greeting + name; // message will be "Hello, Alice"
-   - Number: Represents numeric values, including integers and floating-point numbers. Example: 42, 3.14
-   - Boolean: Represents a logical value that can be either true or false. Example: true, false
+(console.log (type of);//shows type of variable.
+
+   - Number: Represents numeric values, including integers and floating-point numbers. Example: 42, 3.14   //limits of numbers
+   - Boolean: Represents a logical value that can be either true or false. Example: true, false ...Truthy & falsy 
    - Null: Represents the intentional absence of any object value. Example: null
-   - Undefined: Represents a variable that has been declared but has not been assigned a value. Example: undefined
-   - Symbol: Represents a unique identifier that can be used as a property key in objects. Example: Symbol('mySymbol')
+   - Undefined: Represents a variable that has been declared but has not been assigned a value. Example: undefined  // non intentional emptiness
+   - Symbol: Represents a unique identifier that can be used as a property key in objects.
+    Example: Symbol('mySymbol')
+   -Bigint-is a JavaScript numeric type designed for integers larger than the safe Number limit.
 
  key differences between primitive and non-primitive data types:
 . Mutability: Primitive data types are immutable, meaning their values cannot be changed after they are created. Non-primitive data types (objects) are mutable, meaning their properties can be changed after they are created.
@@ -46,12 +50,28 @@ console.log(obj1.name === obj2.name); // Output: true (because the name properti
 
 
 
-2. Non-primitive data types(objects):
+2. Non-primitive data types(objects)://complex datatypes
 They are mutable (can be changed after they are created) and are stored as references to the memory location where the object is stored.
  The non-primitive data types include:
-   - Object: Represents a collection of key-value pairs. Example: let person = { name: "Alice", age: 30 };
+   - Object: Represents a collection of key-value pairs.  ///labels.
+    Example: let person = { name: "Alice", age: 30 };
 
-   - Array: Represents an ordered list of values. Example:let numbers = [1, 2, 3, 4, 5];
+
+    example,
+
+let obj={
+hobbies: ["tennis","football", "Gaming"],
+age=7,
+height: "70cm"
+getAverageGrowthRate: function (){},
+console.log(obj.hobbies)=2;
+
+
+}
+
+   - Array: Represents an ordered list of related values.
+    Example:let numbers = [1, 2, 3, 4, 5];...elements/numbers in an array
+
 
    - Function: Represents a reusable block of code that can be executed when called. Example: function greet() { console.log("Hello!"); }
 ie 
