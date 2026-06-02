@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>DOM Practice</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-light">
+
+  <!-- HEADER -->
+  <header class="bg-dark text-white p-4 mb-4">
+    <div class="container">
+      <h1 id="main-title">DOM Practice App</h1>
+      <p class="mb-0">Learn selectors, events, and manipulation</p>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- CARD -->
+    <div class="card shadow-sm mb-4">
+
+      <div class="card-header">
+        <h3>Add Item</h3>
+      </div>
+
+      <div class="card-body">
+
+        <!-- FORM -->
+        <form id="item-form">
+
+          <div class="mb-3">
+            <label class="form-label">Item Name</label>
+
+            <input
+              type="text"
+              id="item-input"
+              class="form-control"
+              placeholder="Enter item"
+            />
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Add Item
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+    <!-- LIST GROUP -->
+    <ul class="list-group" id="item-list">
+
+      <li class="list-group-item">
+        HTML
+      </li>
+
+      <li class="list-group-item">
+        CSS
+      </li>
+
+      <li class="list-group-item">
+        JavaScript
+      </li>
+
+      <li class="list-group-item">
+        DOM
+        </li>
+
+    </ul>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="dom.js"></script>
+<!--!
+    // SELECTING ELEMENTS
+    const title = document.getElementById("main-title");
+    const form = document.getElementById("item-form");
+    const input = document.getElementById("item-input");
+    const list = document.getElementById("item-list");
+
+    // CHANGE TITLE
+    title.textContent = "Learning the DOM";
+
+    // FORM SUBMIT EVENT
+    form.addEventListener("submit", function(event) {
+
+      // Prevent page refresh
+      event.preventDefault();
+
+      // Get input value
+      const inputValue = input.value;
+
+      // Create new li
+      const newItem = document.createElement("li");
+
+      // Add bootstrap class
+      newItem.className = "list-group-item";
+
+      // Add text
+      newItem.textContent = inputValue;
+
+      // Append to list
+      list.appendChild(newItem);
+
+      // Clear input
+      input.value = "";
+
+    }); 
+        
+  
+
+-->
+
+</body>
+</html>

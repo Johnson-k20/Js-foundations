@@ -84,6 +84,7 @@ console.log("Liftoff!");
 
 **Real Example — User Login Retry:
 javascript
+
 let attempts = 0;
 const maxAttempts = 3;
 let isLoggedIn = false;

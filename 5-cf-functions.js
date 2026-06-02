@@ -7,8 +7,15 @@
  * ANALOGY: Like a vending machine - you insert money (input), it processes,
  * and gives you a snack (output).
  
+
 Function Declarations: These use the function keyword followed by a name.
  They are subject to hoisting, meaning the JavaScript engine moves them to the top of their scope, allowing them to be called before they appear in the code
+ calling a function involves using its name followed by parentheses, optionally passing arguments inside the parentheses
+e
+
+
+
+
  BASIC FUNCTION DECLARATION
 
 

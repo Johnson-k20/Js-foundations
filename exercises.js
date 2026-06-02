@@ -68,6 +68,10 @@ const looseEquality = num1 == str1;
 const strictEquality = num1 === str1;
 console.log("Loose equality (5 == '5'):", looseEquality); // Output: true
 console.log("Strict equality (5 === '5'):", strictEquality); // Output: false
+explanation: The loose equality operator (==) compares values for equality after performing type coercion,
+ so it converts the string "5" to the number 5 before comparing, resulting in true.
+  The strict equality operator (===) compares both value and type without coercion, so it sees that 5 is a number and "5" is a string, resulting in false.
+
 
 create variables for principal rate and time and calculate the simple interest using the formula: simple interest = (principal * rate * time) / 100.display the result.
 const principal = 1000; // Example principal amount
@@ -75,6 +79,10 @@ const rate = 5; // Example interest rate
 const time = 2; // Example time in years
 const simpleInterest = (principal * rate * time) / 100;
 console.log("Simple Interest:", simpleInterest); // Output: 100
+
+
+
+
 
 TELECOM AIRTIME PURCHASE VALIDATION SYSTEM
 

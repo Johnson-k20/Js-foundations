@@ -1,7 +1,35 @@
 /* Operators in JavaScript 
 An operator is a special symbol or keyword that performs a specific operation on one or more operands (values or variables) and produces a result.
 They combine values and variables to perform operations such as arithmetic calculations, comparisons, logical operations, and more.
+
+Post and Pre Increment and Decrement Operators
+- The post-increment operator (x++) returns the current value of x and then increments it by 1.
+- The pre-increment operator (++x) increments the value of x by 1 and then returns the new value.
+- The post-decrement operator (x--) returns the current value of x and then decrements it by 1.
+- The pre-decrement operator (--x) decrements the value of x by 1 and then returns the new value.
+
+
+example code:
+let count = 5;
+console.log(count++); // Output: 5 (post-increment)
+
+console.log(count); // Output: 6 (count is now 6 after the post-increment)
+
+console.log(++count); // Output: 7 (pre-increment)
+
+console.log(count); // Output: 7 (count is still 7 after the pre-increment) 
+console.log(count--); // Output: 7 (post-decrement)
+
+console.log(count);// Output: 6 (count is now 6 after the post-decrement)
+
+console.log(--count);// Output: 5 (pre-decrement)
+
+console.log(count); // Output: 5 (count is still 5 after the pre-decrement)
+
+
+
 There are several types of operators in JavaScript, including:
+
 1. Arithmetic Operators: These operators perform basic mathematical operations such as addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).
 example:
 let a = 10;
@@ -10,19 +38,49 @@ console.log(a + b); // Output: 15
 console.log(a - b); // Output: 5
 console.log(a * b); // Output: 50
 console.log(a / b); // Output: 2
-console.log(a % b); // Output: 0        
+console.log(a % b); // Output: 0   
+
 2. Comparison Operators: These operators compare two values and return a boolean result (true or false). Examples include equal to (==), not equal to (!=), greater than (>), less than (<), greater than or equal to (>=), and less than or equal to (<=).
 example:
 let x = 10;
 let y = 5;
-console.log(x == y); // Output: false
-console.log(x != y);
-// Output: true
+console.log(x == y); // Output: false  
+console.log(x != y);// Output: true
 console.log(x > y); // Output: true
 console.log(x < y); // Output: false
 console.log(x >= y); // Output: true
-console.log(x <= y); // Output: false
+console.log(x <= y); // Output: false 
+console.log(x==y); // Output: false (loose equality, performs type coercion -checks only value)//data type is not considered but they are considered internally
+console.log(x!=y); // Output: true (loose inequality, performs type coercion-checks only value)//data type is not considered but they are considered internally
+console.log(x === y); // Output: false (strict equality, checks both value and type)
+console.log(x !== y); // Output: true (strict inequality, checks both value and type)
+
+
 3. Logical Operators: These operators are used to combine multiple boolean expressions and return a boolean result. Examples include logical AND (&&), logical OR (||), and logical NOT (!).
+They are used to evaluate multiple conditions and return a single boolean value based on the logic of the expressions.
+In javascript , logical operators dont just return true or false, they return the value of the operand that determines the result of the operation.
+logical AND (&&) operator returns true if both operands are true, otherwise it returns false.
+example:
+let p = true;
+let q = false;
+console.log(p && q); // Output: false (because q is false)
+console.log(p && true); // Output: true (because both operands are true)
+
+logical OR (||) operator returns true if at least one of the operands is true, otherwise it returns false.
+example:
+
+let p = true;
+let q = false;
+console.log(p || q); // Output: true (because p is true)
+console.log(false || q); // Output: false (because both operands are false)
+
+logical NOT (!) operator negates the boolean value of its operand, returning true if the operand is false and false if the operand is true.
+example:
+let p = true;
+let q = false;
+console.log(!p); // Output: false (because p is true)
+console.log(!q); // Output: true (because q is false)
+
 example:
 let p = true;
 let q = false;
@@ -30,6 +88,7 @@ console.log(p && q); // Output: false
 console.log(p || q); // Output: true
 console.log(!p); // Output: false
 console.log(!q); // Output: true
+
 4. Assignment Operators: These operators are used to assign values to variables. Examples include the simple assignment operator (=), addition assignment (+=), subtraction assignment (-=), multiplication assignment (*=), and division assignment (/=).
 example:
 let num = 10;
@@ -41,11 +100,13 @@ num *= 2; // Equivalent to num = num * 2
 console.log(num); // Output: 24
 num /= 4; // Equivalent to num = num / 4
 console.log(num); // Output: 6
+
 5. Ternary Operator: This operator is a shorthand for an if-else statement and is represented by the symbol (?). It takes three operands: a condition, a value to return if the condition is true, and a value to return if the condition is false.
 example:
 let age = 18;
 let canVote = (age >= 18) ? "Yes" : "No";
-console.log(canVote); // Output: Yes
+console.log(canVote); // Output: 
+
 6. Typeof Operator: This operator is used to determine the type of a value or variable. It returns a string indicating the type of the operand.
 example:
 let str = "Hello";
@@ -57,9 +118,10 @@ console.log(typeof bool); // Output: "boolean"
        
 How operators behave with different data types:
 
--operator behaviour depends on:
+Operator behaviour depends on:
 1. The types of the operands involved in the operation.
 2. The specific operator being used.
+
 (A)
 . Using var (function-scoped variable)
    Variables are function-scoped, if they are accessible within the function they are declared in and can be updated and re-declared.
@@ -72,6 +134,7 @@ function example() {
   console.log(x); // Output: 10
 }   
 console.log(x); // Error: x is not defined (x is not accessible outside the example function)
+
 (B)
 . Using let (block-scoped variable)
    Variables declared with let are block-scoped, meaning they are only accessible within the block they are declared in.
